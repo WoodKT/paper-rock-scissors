@@ -10,8 +10,8 @@ const game = () => {
   const playGame = () => {
     const rockBtn = document.querySelector(".rock");
     const paperBtn = document.querySelector(".paper");
-    const scissorsBtn = document.querySelector(".scissors");
-    const playerOptions = [rockBtn, paperBtn, scissorsBtn];
+    const scissorBtn = document.querySelector(".scissor");
+    const playerOptions = [rockBtn, paperBtn, scissorBtn];
     const computerOptions = ["rock", "paper", "scissors"];
 
     // Function to start playing game
@@ -56,9 +56,24 @@ const game = () => {
       }
     } else if (player == "scissors") {
       if (computer == "rock") {
+        result.textContent = "Player Won";
+        computerScore++;
+        computerScoreBoard.textContent = computerScore;
       } else {
+        result.textContent = "Player Won";
+        playerScore++;
+        playerScoreBoard.textContent = playerScore;
       }
     } else if (player == "paper") {
+      if(computer == "scissors"){
+        result.textContent = "Computer Won";
+        computerScore++;
+        computerScoreBoard.textContent = computerScore;
+    }else{
+      result.textContent = 'Player Won';
+      playerScore++;
+      playerScoreBoard.textContent = playerScore;
+       }
     }
   };
 
@@ -80,6 +95,8 @@ const game = () => {
       result.innerText = "You Won The Game";
       result.style.color = "#308D46";
     } else if (playerScore < computerScore) {
+      result.style.fontSize = '2rem';
+      result.innerText = 'You Lost The Game';
       result.style.color = "red";
     } else {
       result.style.fontSize = "2rem";
