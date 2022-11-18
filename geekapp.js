@@ -79,50 +79,61 @@ const game = () => {
           result.textContent = "Player Won";
           playerScore++;
           playerScoreBoard.textContent = playerScore;
+          console.log("Player Chose scissors, Computer chose paper, player wins");
         } else if (computer == "lizard") {
           result.textContent = "Player Won";
           playerScore++;
           playerScoreBoard.textContent = playerScore;
+          console.log("Player Chose scissors, Computer chose lizard, player wins");
         } else {
           result.textContent = "Computer Won";
           computerScore++;
           computerScoreBoard.textContent = computerScore;
+          console.log("Player Chose scissors, Computer chose spock, computer wins");
         }
       } else if (player == "paper") {
         if(computer == "rock"){
           result.textContent = 'Player Won';
           playerScore++;
           playerScoreBoard.textContent = playerScore;
+          console.log("Player Chose paper, Computer chose rock, player wins");
       } else if (computer == "scissors") {
           result.textContent = "Computer Won";
           computerScore++;
           computerScoreBoard.textContent = computerScore;
+          console.log("Player Chose paper, Computer chose scissors, computer wins");
       } else if (computer == "lizard") {
         result.textContent = "Computer Won";
         computerScore++;
         computerScoreBoard.textContent = computerScore;
+        console.log("Player Chose paper, Computer chose lizard, computer wins");
       } else{
         result.textContent = 'Player Won';
         playerScore++;
         playerScoreBoard.textContent = playerScore;
+        console.log("Player Chose paper, Computer chose spock, player wins");
       }
          } else if (player == "lizard") {
           if (computer == "rock") {
             result.textContent = "Computer Won";
             computerScore++;
             computerScoreBoard.textContent = computerScore;
+            console.log("Player Chose lizard, Computer chose rock, computer wins");
           } else if (computer == "paper") {
               result.textContent = 'Player Won';
               playerScore++;
               playerScoreBoard.textContent = playerScore;
+              console.log("Player Chose lizard, Computer chose paper, player wins");
           } else if (computer == "scissors") {
               result.textContent = "Computer Won";
               computerScore++;
               computerScoreBoard.textContent = computerScore;
+              console.log("Player Chose lizard, Computer chose scissors, computer wins");
           } else {
             result.textContent = "Computer Won";
             computerScore++;
             computerScoreBoard.textContent = computerScore;
+            console.log("Player Chose lizard, Computer chose spock, computer wins");
           }
          }
     };
