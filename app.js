@@ -10,7 +10,8 @@ const game = () => {
   const playGame = () => {
     const rockBtn = document.querySelector(".rock");
     const paperBtn = document.querySelector(".paper");
-    const playerOptions = [rockBtn, paperBtn];
+    const scissorsBtn = document.querySelector(".scissors");
+    const playerOptions = [rockBtn, paperBtn, scissorsBtn];
     const computerOptions = ["rock", "paper", "scissors"];
 
     // Function to start playing game
