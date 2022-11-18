@@ -46,29 +46,35 @@ const game = () => {
       computer = computer.toLowerCase();
       if (player === computer) {
         result.textContent = "Tie";
+        console.log("Both Chose the same, tie");
       } else if (player == "rock") {
         if (computer == "paper") {
           result.textContent = "Computer Won";
           computerScore++;
           computerScoreBoard.textContent = computerScore;
+          console.log("Player Chose rock, Computer chose paper, computer wins");
         } else if (computer == "scissors") {
           result.textContent = "Player Won";
           playerScore++;
           playerScoreBoard.textContent = playerScore;
+          console.log("Player Chose rock, Computer chose scissors, player wins");
         } else if (computer == "lizard") {
           result.textContent = "Player Won";
           playerScore++;
           playerScoreBoard.textContent = playerScore;
+          console.log("Player Chose rock, Computer chose lizard, player wins");
         } else {
           result.textContent = "Player Won";
           playerScore++;
           playerScoreBoard.textContent = playerScore;
+          console.log("Player Chose rock, Computer chose spock, player wins");
         }
       } else if (player == "scissors") {
         if (computer == "rock") {
           result.textContent = "Computer Won";
           computerScore++;
           computerScoreBoard.textContent = computerScore;
+          console.log("Player Chose scissors, Computer chose rock, computer wins");
         } else if (computer == "paper") {
           result.textContent = "Player Won";
           playerScore++;
