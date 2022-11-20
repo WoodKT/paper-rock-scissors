@@ -134,7 +134,29 @@ const game = () => {
             computerScore++;
             computerScoreBoard.textContent = computerScore;
             console.log("Player Chose lizard, Computer chose spock, computer wins");
-          }
+          } 
+            } else if (player == "spock") { //new spock logic
+            if (computer == "rock") {
+              result.textContent = "Player Won";
+              playerScore++;
+              playerScoreBoard.textContent = playerScore;
+              console.log("Player Chose spock, Computer chose rock, player wins");
+            } else if (computer == "paper") {
+                result.textContent = 'Computer Won';
+                computerScore++;
+                computerScoreBoard.textContent = computerScore;
+                console.log("Player Chose Spock, Computer chose paper, computer wins");
+            } else if (computer == "scissors") {
+                result.textContent = "Player Won";
+                playerScore++;
+                playerScoreBoard.textContent = playerScore;
+                console.log("Player Chose spock, Computer chose scissors, player wins");
+            } else {
+              result.textContent = "Computer Won";
+              computerScore++;
+              computerScoreBoard.textContent = computerScore;
+              console.log("Player Chose spock, Computer chose lizard, computer wins");
+            }
          }
     };
   
